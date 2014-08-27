@@ -30,7 +30,11 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		
-		<? wp_enqueue_style('omegacon', get_stylesheet_directory_uri().'/library/less/style.less'); ?>
+		<? #wp_enqueue_style('omegacon', get_stylesheet_directory_uri().'/library/less/style.less'); ?>
+		
+		<link rel="stylesheet/less" href="<?= get_stylesheet_directory_uri() ?>/library/less/style.less" type="text/css">
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js'></script>
+		<script>less.watch();</script>
 
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
@@ -40,7 +44,6 @@
 		<!-- end analytics -->
 
 	</head>
-
 	<body <?php body_class(); ?>>
 		
 		<!-- Facebook JS SDK -->
